@@ -1,0 +1,33 @@
+Options FollowSymLinks
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to content.php, and everythink works as normal.
+
+    ErrorDocument 404 /index.php
+</IfModule>
+
+# Set Maximum variable dan size saat POST
+php_value max_input_vars 10000
+php_value suhosin.get.max_vars 10000
+php_value suhosin.post.max_vars 10000
+php_value suhosin.request.max_vars 10000
+php_value memory_limit 200M
+php_value upload_max_filesize 40M
+php_value post_max_size 42M
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+#<IfModule php5_module>
+#   php_value session.cookie_domain ".villasistem.com"
+#</IfModule>
+# END cPanel-generated php ini directives, do not edit
