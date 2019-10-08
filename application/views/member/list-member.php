@@ -40,7 +40,7 @@
                             <td><?= date('d F Y', $m['date_created']); ?></td>
                             <td>
                                 <a href="#" data-id="<?= $m['id']; ?>" data-target="#edit-member" data-toggle="modal" class="badge badge-success btn-edit">Edit</a>
-                                <a href="<?= base_url('member/deleteMember/') . $m['id'] ?>" onclick="return myFunction()" class="badge badge-danger">delete</a>
+                                <a href="<?= base_url('member/delete/') . $m['id'] ?>" onclick="return myFunction()" class="badge badge-danger">delete</a>
                             </td>
                         </tr>
                     <?php } ?>

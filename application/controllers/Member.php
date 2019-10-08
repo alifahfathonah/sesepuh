@@ -35,6 +35,11 @@ class Member extends CI_Controller
         }
     }
 
+    public function editMember($id)
+    {
+        $data = $this->db->get_where('tbl_user', ['id' => $id])->row_array();
+        echo json_encode($data);
+    }
     public function update()
     {
         $data = [
@@ -51,9 +56,13 @@ class Member extends CI_Controller
         redirect('member');
     }
 
-    public function editMember($id)
+    public function delete($id)
     {
-        $data = $this->db->get_where('tbl_user', ['id' => $id])->row_array();
-        echo json_encode($data);
+        if ($this->db->delete('tbl_user', ['id' => $id])) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Member deleted!</div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Data Member failed delete!</div>');
+        }
+        redirect('member');
     }
 }
