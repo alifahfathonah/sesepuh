@@ -38,13 +38,13 @@
                                     <?= $m['name'] ?>
                                 </td>
                                 <td align="center">
-                                    <input type="radio" value="1" name="check[]" id="check1">
+                                    <input type="checkbox" value="1" name="check[]" id="check1">
                                 </td>
                                 <td align="center">
-                                    <input type="radio" value="2" name="check[]" id="check2">
+                                    <input type="checkbox" value="2" name="check[]" id="check2">
                                 </td>
                                 <td align="center">
-                                    <input type="radio" value="3" name="check[]" id="check3">
+                                    <input type="checkbox" value="3" name="check[]" id="check3">
                                 </td>
                             </tr>
                         <?php } ?>
