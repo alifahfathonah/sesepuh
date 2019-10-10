@@ -7,9 +7,9 @@
     <div class="row">
         <div class="col">
             <?php if (validation_errors()) { ?>
-            <div class="alert alert-danger" role="alert">
-                <?= validation_errors(); ?>
-            </div>
+                <div class="alert alert-danger" role="alert">
+                    <?= validation_errors(); ?>
+                </div>
             <?php } ?>
 
             <?= $this->session->flashdata('message'); ?>
@@ -30,18 +30,18 @@
                 <tbody>
                     <?php $no = 1; ?>
                     <?php foreach ($submenu as $sm) { ?>
-                    <tr>
-                        <td><?= $no++ ?></td>
-                        <td><?= $sm['title'] ?></td>
-                        <td><?= $sm['menu'] ?></td>
-                        <td><?= $sm['url'] ?></td>
-                        <td><?= $sm['icon'] ?></td>
-                        <td><?= $sm['is_active'] ?></td>
-                        <td>
-                            <a href="" class="badge badge-success">Edit</a>
-                            <a href="" class="badge badge-danger">delete</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?= $no++ ?></td>
+                            <td><?= $sm['title'] ?></td>
+                            <td><?= $sm['menu'] ?></td>
+                            <td><?= $sm['url'] ?></td>
+                            <td><?= $sm['icon'] ?></td>
+                            <td><?= $sm['is_active'] ?></td>
+                            <td>
+                                <a href="" class="badge badge-success">Edit</a>
+                                <a href="" class="badge badge-danger">delete</a>
+                            </td>
+                        </tr>
                     <?php } ?>
                 </tbody>
             </table>
@@ -72,7 +72,7 @@
                         <select name="menu_id" id="menu_id" class="form-control">
                             <option value="">Selecet Menu</option>
                             <?php foreach ($menu as $key) { ?>
-                            <option value="<?= $key['id'] ?>"><?= $key['menu'] ?></option>
+                                <option value="<?= $key['id'] ?>"><?= $key['menu'] ?></option>
                             <?php } ?>
                             <option value="">Selecet Menu</option>
                         </select>
@@ -81,7 +81,7 @@
                         <input type="text" class="form-control" id="url" name="url" placeholder="Submenu url">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="icon" name="icon" placeholder="Submenu icon">
+                        <input type="text" class="form-control" id="icon" name="icon" placeholder="Submenu icon" value="fab fa-fw">
                     </div>
                     <div class="form-group">
                         <div class="form-check">

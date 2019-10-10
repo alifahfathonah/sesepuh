@@ -10,7 +10,7 @@
 
             <?= $this->session->flashdata('message'); ?>
 
-            <!-- <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newMenuModal">Add New Baru</a> -->
+            <a href="<?= base_url('member/createForm') ?>" class="btn btn-primary mb-3">Create Form</a>
             <table class="table table-hover ">
                 <thead>
                     <tr>
@@ -55,7 +55,7 @@
 </div>
 <!-- End of Main Content -->
 <!-- Modal -->
-<div class="modal fade" id="edit-member" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

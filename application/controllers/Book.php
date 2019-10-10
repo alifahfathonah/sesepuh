@@ -50,7 +50,7 @@ class Book extends CI_Controller
         ];
 
         if ($this->db->insert('tbl_user_book', $data)) {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Berhasil menambahkan buku baru</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil menambahkan buku baru</div>');
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Buku baru gagal ditambahkan!</div>');
         }
