@@ -31,7 +31,7 @@ class Member extends CI_Controller
         } else {
             $this->db->insert('tbl_user_menu', ['menu' => $this->input->post('menu')]);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu new added!</div>');
-            redirect('menu');
+            redirect('member');
         }
     }
 
