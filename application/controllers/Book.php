@@ -10,7 +10,7 @@ class Book extends CI_Controller
     }
     public function index()
     {
-        $data['title'] = 'List';
+        $data['title'] = 'List Buku';
         $data['user'] = $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array();
         $data['menu'] = $this->db->get('tbl_user_menu')->result_array();
 

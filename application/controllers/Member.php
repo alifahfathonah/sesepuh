@@ -69,10 +69,11 @@ class Member extends CI_Controller
 
     function telegram($msg = null, $telegram_id = null)
     {
-        $_id = $this->input->post('id[]');
-        $_name = $this->input->post('name[]');
-        $_check = $this->input->post('check[]');
-
+        $_id = $this->input->post('id');
+        $_name = $this->input->post('name');
+        $_check = $this->input->post('check');
+        print_r($_id);
+        die;
         $quotes = $this->input->post('quotes');
         $by_ = $this->input->post('by_');
 

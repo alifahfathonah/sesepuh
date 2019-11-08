@@ -3,25 +3,22 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $title ?></h1>
-
     <div class="row">
         <div class="col-lg-6">
             <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>') ?>
-
             <?= $this->session->flashdata('message'); ?>
-            <form action="<?= base_url('member/telegram') ?>" method="post">
 
+            <form action="<?= base_url('member/telegram') ?>" method="post">
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th rowspan="2">No</th>
                             <th rowspan="2">Nama</th>
-                            <th colspan="3" style="text-align:center;">Tidak Laporan / Hari</th>
+                            <th colspan="3" style="text-align:center;">Laporan</th>
                         </tr>
                         <tr>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
+                            <th>Ya</th>
+                            <th>Tidak</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,22 +27,22 @@
                             <tr>
 
                                 <td align="center">
-                                    <input type="hidden" name="id[]" id="id" value="<?= $m['id']; ?>">
+                                    <input type="hidden" name="id[]" id="id[]" value="<?= $m['id']; ?>">
                                     <?= $no++ ?>
                                 </td>
                                 <td>
-                                    <input type="hidden" name="name[]" id="name" value="<?= $m['name']; ?>">
+                                    <input type="hidden" name="name[]" id="name[]" value="<?= $m['name']; ?>">
                                     <?= $m['name'] ?>
                                 </td>
                                 <td align="center">
-                                    <input type="checkbox" value="1" name="check[]" id="check1">
+                                    <input type="checkbox" value="1" name="check[]" id="check[]1">
                                 </td>
                                 <td align="center">
-                                    <input type="checkbox" value="2" name="check[]" id="check2">
+                                    <input type="checkbox" value="2" name="check[]" id="check[]2">
                                 </td>
-                                <td align="center">
-                                    <input type="checkbox" value="3" name="check[]" id="check3">
-                                </td>
+                                <!-- <td align="center">
+                                    <input type="checkbox" value="3" name="check[]" id="check[]3">
+                                </td> -->
                             </tr>
                         <?php } ?>
                     </tbody>
